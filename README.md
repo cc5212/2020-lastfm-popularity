@@ -122,5 +122,3 @@ Just like in popularTags, we start by generating a dataframe with multiple rows 
 
 
 
-# Appendix
-
