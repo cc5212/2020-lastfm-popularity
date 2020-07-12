@@ -9,9 +9,9 @@ The main goal of the project was to analize data from lastfm to answer questions
 * Which tags have a higher standard deviation in the popularity of their artists
 
 # Data
+Every row in the dataset contains information about a specific artist, like id, country, tags, number of listeners and number of scrobbles, this last one is of particular importance, as it is the amount of times that lastfm users have listened to that artist's track. For this reason, scrobbles were used in this project as a measure of an artist's popularity.
 
-
-
+The dataset used in the project is available in csv format [here](https://www.kaggle.com/pieca111/music-artists-popularity), it has a size of approximately 196 MB and it consists of over 1.4 million artists.
 # Methods
 
 
