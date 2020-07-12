@@ -71,6 +71,51 @@ Just like in popularTags, we start by generating a dataframe with multiple rows 
 
 # Results
 
+### Popular Tags
+| Tag | Scrobbles |
+|---|:---:|
+| seen live| 75.708.482.958 |
+| rock| 66.021.225.555 |
+| alternative| 60.493.629.205 |
+| indie| 49.710.840.958 |
+| pop| 47.786.719.362 |
+| electronic| 37.965.794.738 |
+| american| 37.789.782.267 |
+| alternative rock| 37.160.144.106 |
+| 00s| 34.764.928.557 |
+| male vocalists| 34.674.259.862 |
+
+### Popular Artists by Tag (rock)
+
+| Artist | Scrobbles |
+|---|:---:|
+| The Beatles | 517.126.254 |
+| Radiohead | 499.548.797 |
+| Coldplay | 360.111.850 |
+| Muse | 344.838.631 |
+| Arctic Monkeys | 332.306.552 |
+| Pink Floyd | 313.236.119 |
+| Linkin Park | 294.986.508 |
+| Red Hot Chili Peppers | 293.784.041 |
+| Lady Gaga |  285.469.647 |
+| Metallica | 281.172.228 |
+
+(Also outputs a list of each artist's tags, which has been omitted here)
+### Tags by Deviation
+
+|Tag | Standard deviation |
+|---|:---:|
+| linkin | 147.281.550,5 |
+| cold play | 143.992.454,11572826 |
+| Hollywood Pop | 108.578.359,5 |
+| gayfish | 103.240.777,68459223 |
+| Its Britney Bitch | 100.676.999,5 |
+| umbrella | 93.925.358,88343942 |
+| lp | 92.640.417,61620608 |
+| slim shady | 92.537.331,97107212 |
+| hayley williams | 87.853.126,0769334 |
+| hollywood sadcore | 86.806.549,45046204 |
+
 
 
 # Conclusion
