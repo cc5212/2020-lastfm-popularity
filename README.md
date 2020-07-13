@@ -1,17 +1,18 @@
 # 2020-lastfm-popularity
-Analysis of popularity according to scrobbles in lastfm using Apache Spark [Joaquín Larraín, Vicente Rojas, Roberto Tapia. Group 6]
+Analysis of popularity according to scrobbles in [**last.fm**](https://www.last.fm) using Apache Spark [Joaquín Larraín, Vicente Rojas, Roberto Tapia. Group 6]
 
 # Overview
 
-The main goal of the project is to analize data from lastfm to answer questions about popularity of artists and tags. Particularly, the questions that we studied and answered are:
+The main goal of the project is to analize data from last.fm to answer questions about popularity of artists and tags. Particularly, the questions that we studied and answered are:
 * Which tags are the most popular?
 * Given a tag, who are the most popular artists that have said tag?
 * Which tags have a higher standard deviation in the popularity of their artists
 
 # Data
-Every row in the dataset contains information about a specific artist: id, country, tags, amount of listeners and number of scrobbles, this last one is of particular importance, as it is the amount of times that lastfm users have listened to that artist's track. For this reason, scrobbles were used in this project as a measure of an artist's popularity.
+Every row in the dataset contains information about a specific artist: id, country, tags, amount of listeners and number of scrobbles. This last one is of particular importance, as it is the amount of times that last.fm users have listened to that artist's track. For this reason, scrobbles were used in this project as a measure of an artist's popularity. Scrobbles were picked over listeners due to scrobbles showing overall popularity or appeal of an artist, so if two tags have the same amount of listeners, but one has more scrobbles than the other, it shows that the second artist has a better appeal into their audience, who listen to their music more frequently. 
 
 The dataset used in the project is available in csv format [here](https://www.kaggle.com/pieca111/music-artists-popularity), it has a size of approximately 196 MB and it consists of over 1.4 million artists.
+
 # Methods
 To answered the questions presented in the overview we used PySpark, mainly because it allowed us to easily implement the tools we needed, like filters, maps, reductions and aggregations.
 
@@ -120,4 +121,12 @@ Just like in popularTags, we start by generating a dataframe with multiple rows 
 
 # Conclusion
 
+As seen from the results, the most popular tags are the ones associated with generic music genres like rock, alternative or indie. These tags usually have subgenres associated with them (ex: classic rock, alternative rock, etc). This makes sense because a wider variety of music and artists are part of these music genres. 
 
+Looking over the results from the rock tag, they indeed show popular rock artists. Lady Gaga seems to be the one exception, however, despite being mainly associated with pop music, she also has some rock tracks, and because of her big audience, she also makes it into the list. This can show that for an artist to make it into the top of appearances into a specific tag they don’t necessarily need to be known for that tag, but rather have at least some tracks with that genre. 
+
+Regarding the results seen in Tags by Deviation, most of the results are associated with a specific artist (linkin with Linkin Park, cold play with Coldplay, hayley williams with Hayley Williams, etc). This shows that these tags are most likely being used by both the original artists and by artists using their tag to try and get more views (by doing covers, or just using their tags), which make the standard deviation bigger due to the scrobble differences with the big artists. 
+
+Overall, Spark helped us develop this project thanks to its easy management of DataFrames and the use of the aggregate and reduce methods, which made work more straightforward. Spark programming was also easy to implement, or at least easier for us than Uhadoop would have been. Thanks to the mentioned Spark tools, the implementation was not particularly hard, the challenge of this project was to pick the right framework (Spark) for the project and thinking over how to get the results we wanted.
+
+As a way of further exploring this dataset, it would be possible to compare how this results would had been if the amount of listeners was used as the popularity metric for artists instead of scrobbles, or mixing up both metrics to get more specific results. 
